@@ -5,7 +5,7 @@
       Anuj Sharma
     </a> 👋
   </h1>
-  <h3 align="center">Full Stack Developer | Open Source Enthusiast | Tech Blogger</h3>
+  <h3 align="center">CP Enthuastic | Open Source Enthusiast | Tech Blogger</h3>
 </div>
 
 <div align="center">
@@ -27,27 +27,13 @@
 
 ### 🔭 About Me
 
-- 💻 I’m currently working on **Full-Stack & System Design projects**
-- 🌱 I’m currently learning **Docker & Kubernetes**
-- 👯 I’m looking to collaborate on **Open Source MERN Stack projects**
-- 💬 Ask me about **React, Node.js, and Backend Architecture**
-- ⚡ Fun fact: **I code faster when I listen to lo-fi beats**
-
+Nothing Good to Write SO come some day after April 2026 .
 ---
 
 ### 🛠️ Languages and Tools
 
 <p align="left"> 
-  <b>Frontend:</b><br>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Redux-593d88?style=for-the-badge&logo=redux&logoColor=white"/>
+
 </p>
 
-<p align="left"> 
-  <b>Backend:</b><br>
-  <img src="https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Express.js-404d59?style=for-the-badge&logo=express&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
-</p>
+
