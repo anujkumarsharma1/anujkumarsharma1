@@ -531,18 +531,38 @@ def battlefield(snap, cfg, now):
                       f'fill="#3a3128" class="d{k}" style="{delay}"/>')
     svg.add(*static, *alive)
 
-    # robot drone ahead of the soldier; he takes it out on the way past
-    dx_, dy_ = 470.0, 80.0
-    t_drone = t_in + (dx_ - 150 - x_start) / v
-    pdx, pdy = pos(t_drone)
-    dang = art.aim_angle(pdx, pdy, sc, 1, dx_, dy_)
-    dmx, dmy = art.muzzle_world(pdx, pdy, sc, 1, dang)
-    svg.add(f'<g class="dr">{art.drone(dx_, dy_, 0.6, "drb")}</g>')
-    fx.append(art.streak(svg, dmx, dmy, dx_, dy_, 3.6, 1, "tr", f"animation-delay:{t_drone:.2f}s"))
-    fx.append(f'<g class="boom" style="animation-delay:{t_drone + 0.08:.2f}s">'
-              f'<circle cx="{dx_}" cy="{dy_}" r="22" fill="#ff7a1a"/><circle cx="{dx_}" cy="{dy_}" r="13" '
-              f'fill="#ffd166"/><circle cx="{dx_}" cy="{dy_}" r="6" fill="#fff"/></g>')
-    shots.append((t_drone, dang))
+    # A squadron of robot drones. Each fires a laser at the soldier, then he
+    # takes it out. Drone shots slot into gaps between the cell shots, so
+    # every green cell still gets hit.
+    drones = [(250.0, 74.0), (385.0, 88.0), (500.0, 68.0), (615.0, 84.0)]
+    col_times = sorted(t for t, _ in shots)
+    drone_css = []
+    for di, (dx_, dy_) in enumerate(drones):
+        ideal = t_in + (dx_ - 150 - x_start) / v
+        cands = [ideal + k * 0.02 for k in range(-30, 16)]
+        t_d = max(cands, key=lambda t: min([abs(t - c) for c in col_times] + [1.0])
+                  - abs(t - ideal) * 0.05)
+        pdx, pdy = pos(t_d)
+        dang = art.aim_angle(pdx, pdy, sc, 1, dx_, dy_)
+        dmx, dmy = art.muzzle_world(pdx, pdy, sc, 1, dang)
+        svg.add(f'<g class="dr{di}">{art.drone(dx_, dy_, 0.58, "drb")}</g>')
+        # its laser: fired 0.9 s before it dies, just over the soldier's head
+        t_l = max(t_in + 0.3, t_d - 0.9)
+        lx_, ly_ = pos(t_l)
+        fx.append(f'<line x1="{dx_ - 8:.1f}" y1="{dy_ + 6:.1f}" x2="{lx_ + 14:.1f}" '
+                  f'y2="{ly_ - 34:.1f}" stroke="#ff2a1a" stroke-width="2.6" stroke-linecap="round" '
+                  f'class="lz" style="animation-delay:{t_l:.2f}s"/>')
+        fx.append(art.streak(svg, dmx, dmy, dx_, dy_, 3.6, 1, "tr", f"animation-delay:{t_d:.2f}s"))
+        fx.append(f'<g class="boom" style="animation-delay:{t_d + 0.08:.2f}s">'
+                  f'<circle cx="{dx_}" cy="{dy_}" r="22" fill="#ff7a1a"/><circle cx="{dx_}" cy="{dy_}" '
+                  f'r="13" fill="#ffd166"/><circle cx="{dx_}" cy="{dy_}" r="6" fill="#fff"/></g>')
+        shots.append((t_d, dang))
+        dp = (t_d + 0.1) / T * 100
+        back = (20.0 + di * 0.25) / T * 100
+        drone_css.append(
+            f".dr{di}{{animation:dr{di} {T}s linear infinite}}"
+            f"@keyframes dr{di}{{0%,{dp:.2f}%{{opacity:1;transform:none}}{dp + 0.3:.2f}%,{back:.2f}%"
+            f"{{opacity:0;transform:translateY(-120px)}}{back + 4:.2f}%,100%{{opacity:1;transform:none}}}}")
     shots.sort()
     svg.add(*fx)
 
@@ -550,7 +570,7 @@ def battlefield(snap, cfg, now):
     t_last = max(s[0] for s in shots) if shots else 3.0
     t_stamp = min(t_last + 0.9, 17.5)
     cx, cy = W / 2, gy + 3.5 * pitch
-    title = "SECTOR CLEARED" if len(shots) > 1 else "QUIET SECTOR"
+    title = "SECTOR CLEARED" if col_times else "QUIET SECTOR"
     sub = f"{fmt_int(total)} CONTRIBUTIONS · BEST STREAK {longest} DAY{'S' if longest != 1 else ''}"
     bw_ = max(font("fire").width(title, 26, 0.02), font("uib").width(sub, 11.5, 0.1)) + 60
     svg.add(f'<g class="stamp"><path d="{_tile_shape(cx - bw_ / 2, cy - 38, bw_, 74, 12)}" fill="#0b0a14" '
@@ -619,7 +639,6 @@ def battlefield(snap, cfg, now):
     aim.append(f"{min((t_last + 0.4) / T * 100, 99):.2f}%,100%{{transform:rotate(35deg)}}")
     t_first = shots[0][0] if shots else t_in
     ps, pe = t_stamp / T * 100, 19.3 / T * 100
-    dp = (t_drone + 0.1) / T * 100
     svg.style(
         f".a{{animation-duration:{T}s;animation-iteration-count:infinite;animation-timing-function:linear}}"
         + "".join(f".r{r}{{animation-delay:{r * 0.035:.3f}s}}" for r in range(7))
@@ -636,9 +655,9 @@ def battlefield(snap, cfg, now):
         "@keyframes fl{from{transform:scale(1,1)}to{transform:scale(.84,.7)}}"
         ".drb{animation:hov 1.6s ease-in-out infinite alternate}"
         "@keyframes hov{from{transform:translateY(-3px)}to{transform:translateY(3px)}}"
-        f".dr{{animation:dr {T}s linear infinite}}"
-        f"@keyframes dr{{0%,{dp:.2f}%{{opacity:1;transform:none}}{dp + 0.3:.2f}%,{19.6 / T * 100:.2f}%"
-        f"{{opacity:0;transform:translateY(-120px)}}{20.8 / T * 100:.2f}%,100%{{opacity:1;transform:none}}}}"
+        + "".join(drone_css)
+        + f".lz{{opacity:0;animation:lz {T}s linear infinite}}"
+        "@keyframes lz{0%{opacity:1}.6%{opacity:.9}.7%,100%{opacity:0}}"
         f".boom{{opacity:0;transform-box:fill-box;transform-origin:center;animation:boom {T}s linear infinite backwards}}"
         "@keyframes boom{0%{opacity:0;transform:scale(.2)}.3%{opacity:1;transform:scale(.9)}"
         "2.6%{opacity:0;transform:scale(2)}100%{opacity:0}}"

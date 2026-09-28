@@ -11,13 +11,13 @@
   "links": {
     "linkedin": "https://www.linkedin.com/in/anuj-kumar-sharma-0ba045324/",
     "email": "anujkumarsharma049@gmail.com",
-    "codeforces": "",
-    "topmate": "",
+    "codeforces": "https://codeforces.com/profile/anujquant",
+    "topmate": "https://topmate.io/cybersmith",
     "x": "",
-    "medium": ""
+    "medium": "https://medium.com/@cybersmith"
   },
-  "codeforces_handle": "",
-  "medium_handle": "",
+  "codeforces_handle": "anujquant",
+  "medium_handle": "cybersmith",
 
   "ignore_languages": ["HTML", "CSS", "SCSS"],
 

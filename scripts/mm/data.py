@@ -213,7 +213,10 @@ def fetch_codeforces(handle):
 def fetch_medium(handle, limit=3):
     handle = handle.lstrip("@")
     body, _ = _request(f"https://medium.com/feed/@{urllib.parse.quote(handle)}", raw=True,
-                       headers={"Accept": "application/rss+xml"})
+                       headers={"Accept": "application/rss+xml, application/xml",
+                                # Medium rejects unknown clients; look like a feed reader
+                                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                                              "(KHTML, like Gecko) Chrome/140.0 Safari/537.36"})
     root = ET.fromstring(body)
     posts = []
     for item in root.iter("item"):
