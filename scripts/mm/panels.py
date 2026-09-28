@@ -317,7 +317,7 @@ def player_card(snap, cfg, now):
         ("medal", C["ammo"], "BEST STREAK", f"{longest}", "days, all-time"),
         ("merge", C["jet"], "PULL REQUESTS", compact(g["pull_requests"]), "opened, any repo"),
         ("repo", C["hp"], "PUBLIC REPOS", fmt_int(g["repo_count"]), "own, forks excluded"),
-        ("star", C["ammo"], "STARS", fmt_int(stars), "from other people"),
+        ("star", C["ammo"], "STARS", fmt_int(stars), "on own repos"),
     ]
     x0, y0, tw, th, gap = 322, 52, 116.5, 88, 10
     for i, (ic, col, label, value, cap) in enumerate(tiles):

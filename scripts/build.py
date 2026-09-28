@@ -83,7 +83,8 @@ def render_all(snap, cfg, now):
 
     cf_html = ""
     cf = snap.get("codeforces")
-    if cf:
+    # the card appears once the handle has contests or solves to show
+    if cf and (cf.get("contests") or cf.get("solved")):
         p = put("codeforces.svg", panels.codeforces(cf, now))
         cf_html = (f'<p align="center"><a href="https://codeforces.com/profile/{quote(cf["handle"])}">'
                    f'<img src="{p}" width="100%" alt="Codeforces rating {cf.get("rating")}, '
@@ -117,12 +118,12 @@ def render_all(snap, cfg, now):
         ("Best streak (all-time)", f"{longest} day{'s' if longest != 1 else ''}"),
         ("Pull requests opened", fmt_int(g["pull_requests"])),
         ("Public repos (forks excluded)", fmt_int(g["repo_count"])),
-        ("Stars from other people", fmt_int(sum(r["stars"] for r in g["repos"]))),
+        ("Stars on own repos",fmt_int(sum(r["stars"] for r in g["repos"]))),
         ("Rank", f"{rname.title()} ({fmt_int(g['contributions_all_time'])} XP = all-time contributions)"),
         ("Top languages (share of bytes" + (", excluding " + "/".join(cfg["ignore_languages"])
                                             if cfg.get("ignore_languages") else "") + ")", ", ".join(f"{n} {s * 100:.1f}%" for n, s in langs) or "none"),
     ]
-    if cf:
+    if cf_html:
         rows.append(("Codeforces", f"{cf.get('rating')} ({cf.get('rank')}), max {cf.get('max_rating')}, "
                                    f"{cf['solved']} solved"))
     rows.append(("Last sync", f"{tz_now.strftime('%Y-%m-%d %H:%M')} {tz}"))
@@ -184,6 +185,9 @@ def main(argv=None):
         snap, warnings = refresh(cfg, load_snapshot(snap_path), now)
         for w in warnings:
             print(f"::warning::{w}")
+        if any(w.startswith("github:") for w in warnings):
+            # fail loudly: a silently stale profile is worse than a red run
+            sys.exit("GitHub fetch failed; keeping the last published profile.")
         snap_path.parent.mkdir(parents=True, exist_ok=True)
         snap_path.write_text(json.dumps(snap, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 

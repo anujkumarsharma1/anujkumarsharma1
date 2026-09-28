@@ -52,7 +52,6 @@ query($login: String!) {
       totalCount
       nodes {
         name description url stargazerCount forkCount pushedAt isArchived
-        stargazers(first: 100) { nodes { login } }
         primaryLanguage { name }
         languages(first: 20, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }
@@ -123,9 +122,9 @@ def fetch_github(login, token, now):
     for n in user["repositories"]["nodes"]:
         repos.append({
             "name": n["name"], "description": n["description"] or "", "url": n["url"],
-            # stars from other people: a self-star is not a signal
-            "stars": n["stargazerCount"] - sum(
-                1 for s in n["stargazers"]["nodes"] if s["login"].lower() == login.lower()),
+            # The workflow token cannot list stargazers, so a star the owner
+            # gave their own repo cannot be filtered out here.
+            "stars": n["stargazerCount"],
             "forks": n["forkCount"], "pushed_at": n["pushedAt"],
             "archived": n["isArchived"],
             "language": (n["primaryLanguage"] or {}).get("name"),
