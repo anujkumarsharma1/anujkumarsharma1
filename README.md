@@ -14,7 +14,7 @@
 
 <p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 154 commits all-time, 175 contributions in the last 12 months, streak 1 days (best 4), rank Corporal"></p>
 
-<p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 31%, JavaScript 22%, Dart 18%, HTML 16%, Python 6%"></p>
+<p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 38%, JavaScript 27%, Dart 23%, Python 7%, PLpgSQL 3%"></p>
 
 <p align="center"><img src="assets/generated/battlefield.svg" width="100%" alt="Contribution graph as a battlefield: 175 contributions in the last 12 months"></p>
 
@@ -39,10 +39,10 @@
 | Best streak (all-time) | 4 days |
 | Pull requests opened | 10 |
 | Public repos (forks excluded) | 24 |
-| Stars on own repos | 7 |
+| Stars from other people | 7 |
 | Rank | Corporal (196 XP = all-time contributions) |
-| Top languages (share of bytes) | TypeScript 31.2%, JavaScript 22.2%, Dart 18.5%, HTML 16.4%, Python 5.5% |
-| Last sync | 2026-09-28 11:10 IST |
+| Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 38.1%, JavaScript 27.2%, Dart 22.6%, Python 6.7%, PLpgSQL 2.6% |
+| Last sync | 2026-09-28 11:13 IST |
 
 </details>
 
