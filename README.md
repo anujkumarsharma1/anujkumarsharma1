@@ -15,11 +15,11 @@
   <a href="https://medium.com/@cybersmith"><img src="assets/generated/comms-medium.svg" height="46" alt="Medium"></a>
 </p>
 
-<p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 154 commits all-time, 175 contributions in the last 12 months, streak 1 days (best 4), rank Corporal"></p>
+<p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 158 commits all-time, 180 contributions in the last 12 months, streak 1 days (best 4), rank Corporal"></p>
 
-<p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 38%, JavaScript 27%, Dart 23%, Python 7%, PLpgSQL 3%"></p>
+<p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 37%, JavaScript 26%, Dart 22%, Python 11%, PLpgSQL 2%"></p>
 
-<p align="center"><img src="assets/generated/battlefield.svg" width="100%" alt="Contribution graph as a battlefield: 175 contributions in the last 12 months"></p>
+<p align="center"><img src="assets/generated/battlefield.svg" width="100%" alt="Contribution graph as a battlefield: 180 contributions in the last 12 months"></p>
 
 <p align="center"><a href="https://github.com/anujkumarsharma1/kavach"><img src="assets/generated/mission-kavach.svg" width="100%" alt="KAVACH: Finds payloads hidden in the least-significant bits of model weights, the blind spot that pickle scanners like ModelScan never check. Plants, detects, and destroys them live."></a></p>
 
@@ -30,25 +30,22 @@
 
 <p align="center"><img src="assets/generated/locked.svg" width="100%" alt="Locked levels, planned next: RAFT-KV, AGENT-EVAL-HARNESS, LLM-GATEWAY"></p>
 
-<p align="center"><a href="https://codeforces.com/profile/anujquant"><img src="assets/generated/codeforces.svg" width="100%" alt="Codeforces rating None, max None, 0 problems solved"></a></p>
-
 <details>
 <summary><b>Text version</b> · every number above, as a table</summary>
 
 | Stat | Value |
 |---|---|
-| Commits (public, all-time) | 154 |
-| Contributions (last 12 months) | 175 |
+| Commits (public, all-time) | 158 |
+| Contributions (last 12 months) | 180 |
 | Active days (last 12 months) | 49 |
 | Current streak | 1 day |
 | Best streak (all-time) | 4 days |
-| Pull requests opened | 10 |
+| Pull requests opened | 11 |
 | Public repos (forks excluded) | 24 |
-| Stars from other people | 7 |
-| Rank | Corporal (196 XP = all-time contributions) |
-| Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 38.1%, JavaScript 27.2%, Dart 22.6%, Python 6.7%, PLpgSQL 2.6% |
-| Codeforces | None (unrated), max None, 0 solved |
-| Last sync | 2026-09-28 12:08 IST |
+| Stars on own repos | 7 |
+| Rank | Corporal (201 XP = all-time contributions) |
+| Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 36.5%, JavaScript 26.0%, Dart 21.6%, Python 10.6%, PLpgSQL 2.5% |
+| Last sync | 2026-09-28 12:10 IST |
 
 </details>
 
