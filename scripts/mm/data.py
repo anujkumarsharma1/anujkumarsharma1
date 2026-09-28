@@ -52,6 +52,7 @@ query($login: String!) {
       totalCount
       nodes {
         name description url stargazerCount forkCount pushedAt isArchived
+        stargazers(first: 100) { nodes { login } }
         primaryLanguage { name }
         languages(first: 20, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }
@@ -122,7 +123,10 @@ def fetch_github(login, token, now):
     for n in user["repositories"]["nodes"]:
         repos.append({
             "name": n["name"], "description": n["description"] or "", "url": n["url"],
-            "stars": n["stargazerCount"], "forks": n["forkCount"], "pushed_at": n["pushedAt"],
+            # stars from other people: a self-star is not a signal
+            "stars": n["stargazerCount"] - sum(
+                1 for s in n["stargazers"]["nodes"] if s["login"].lower() == login.lower()),
+            "forks": n["forkCount"], "pushed_at": n["pushedAt"],
             "archived": n["isArchived"],
             "language": (n["primaryLanguage"] or {}).get("name"),
             "languages": {e["node"]["name"]: e["size"] for e in n["languages"]["edges"]},
@@ -152,7 +156,7 @@ def fetch_github(login, token, now):
         "contributions_last_year": cal["totalContributions"],
         "calendar": weeks,
         "daily": days,
-        "events": [_event(e) for e in events if _event(e)][:12],
+        "events": [ev for ev in map(_event, events) if ev][:12],
     }
 
 

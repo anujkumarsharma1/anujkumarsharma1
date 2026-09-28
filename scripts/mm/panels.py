@@ -317,7 +317,7 @@ def player_card(snap, cfg, now):
         ("medal", C["ammo"], "BEST STREAK", f"{longest}", "days, all-time"),
         ("merge", C["jet"], "PULL REQUESTS", compact(g["pull_requests"]), "opened, any repo"),
         ("repo", C["hp"], "PUBLIC REPOS", fmt_int(g["repo_count"]), "own, forks excluded"),
-        ("star", C["ammo"], "STARS", fmt_int(stars), "on own repos"),
+        ("star", C["ammo"], "STARS", fmt_int(stars), "from other people"),
     ]
     x0, y0, tw, th, gap = 322, 52, 116.5, 88, 10
     for i, (ic, col, label, value, cap) in enumerate(tiles):
@@ -347,7 +347,9 @@ def loadout(snap, cfg):
     desc = ", ".join(f"{n} {s * 100:.1f}%" for n, s in langs) or "no language data"
     svg = Svg(W, H, "Armory: top languages", f"Share of code bytes: {desc}.")
     _frame(svg)
-    svg.add(header(svg, "ARMORY", f"TOP LANGUAGES · SHARE OF CODE BYTES ACROSS {n_repos} REPOS"))
+    ignored = cfg.get("ignore_languages") or []
+    note = f" · {'/'.join(ignored).upper()} EXCLUDED" if ignored else ""
+    svg.add(header(svg, "ARMORY", f"TOP LANGUAGES BY CODE BYTES · {n_repos} REPOS{note}"))
     taken = set()
     seg, pitch, nseg, bx = 11, 14, 30, 346
     for i, (name, share) in enumerate(langs):
@@ -577,9 +579,13 @@ def battlefield(snap, cfg, now):
     svg.add(art.head_icon(svg, hx - cw - 22, 68, 30),
             svg.text(cnt, hx, 76, "pixel", 20, C["alert"], anchor="end", stroke="#0b0a10", sw=1.2),
             svg.text("DAYS ACTIVE", hx, 90, "pixel", 7.5, "#2f2a24", anchor="end", track=0.06))
-    events = g.get("events") or []
+    feed, seen = [], set()
+    for e in g.get("events") or []:
+        if (e["kind"], e["repo"]) not in seen:  # one line per distinct action
+            seen.add((e["kind"], e["repo"]))
+            feed.append(e)
     actor = cfg.get("callsign", "ANUJ")
-    for i, e in enumerate(events[:3]):
+    for i, e in enumerate(feed[:3]):
         y = 98 + i * 20
         target = e["repo"].upper()
         f_ = font("uib")

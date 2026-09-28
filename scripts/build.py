@@ -117,9 +117,10 @@ def render_all(snap, cfg, now):
         ("Best streak (all-time)", f"{longest} days"),
         ("Pull requests opened", fmt_int(g["pull_requests"])),
         ("Public repos (forks excluded)", fmt_int(g["repo_count"])),
-        ("Stars on own repos", fmt_int(sum(r["stars"] for r in g["repos"]))),
+        ("Stars from other people", fmt_int(sum(r["stars"] for r in g["repos"]))),
         ("Rank", f"{rname.title()} ({fmt_int(g['contributions_all_time'])} XP = all-time contributions)"),
-        ("Top languages (share of bytes)", ", ".join(f"{n} {s * 100:.1f}%" for n, s in langs) or "none"),
+        ("Top languages (share of bytes" + (", excluding " + "/".join(cfg["ignore_languages"])
+                                            if cfg.get("ignore_languages") else "") + ")", ", ".join(f"{n} {s * 100:.1f}%" for n, s in langs) or "none"),
     ]
     if cf:
         rows.append(("Codeforces", f"{cf.get('rating')} ({cf.get('rank')}), max {cf.get('max_rating')}, "

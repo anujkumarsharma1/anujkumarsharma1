@@ -19,7 +19,7 @@
   "codeforces_handle": "",
   "medium_handle": "",
 
-  "ignore_languages": [],
+  "ignore_languages": ["HTML", "CSS", "SCSS"],
 
   "missions": [
     {
