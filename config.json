@@ -1,0 +1,66 @@
+{
+  "login": "anujkumarsharma1",
+  "display_name": "Anuj Kumar Sharma",
+  "callsign": "ANUJ",
+  "name_lines": ["ANUJ KUMAR", "SHARMA"],
+  "headline": "Aspiring Software Engineer · AIT Pune '28",
+  "chips": ["CP ENTHUSIAST", "GSSOC'25 MENTOR", "PUNE, IN"],
+  "objective": "MIT 6.5840 labs 3–4, then raft-kv (Dec 2026)",
+  "timezone": "Asia/Kolkata",
+
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/anuj-kumar-sharma-0ba045324/",
+    "email": "anujkumarsharma049@gmail.com",
+    "codeforces": "",
+    "topmate": "",
+    "x": "",
+    "medium": ""
+  },
+  "codeforces_handle": "",
+  "medium_handle": "",
+
+  "ignore_languages": [],
+
+  "missions": [
+    {
+      "repo": "kavach",
+      "status": "complete",
+      "title": "KAVACH",
+      "subtitle": "Precision Care Hackathon 2026 · working demo",
+      "blurb": "Finds payloads hidden in the least-significant bits of model weights, the blind spot that pickle scanners like ModelScan never check. Plants, detects, and destroys them live.",
+      "tags": ["PYTHON", "PYTORCH", "STREAMLIT"]
+    },
+    {
+      "repo": "zero-to-hero",
+      "status": "briefed",
+      "title": "ZERO-TO-HERO",
+      "blurb": "Autograd engine and a character-level language model, built from scratch while following Karpathy's series.",
+      "tags": ["PYTHON", "PYTORCH"]
+    },
+    {
+      "repo": "league-server",
+      "status": "briefed",
+      "title": "LEAGUE-SERVER",
+      "blurb": "Test-driven Go HTTP service that records and serves player scores, persisted to disk.",
+      "tags": ["GO", "NET/HTTP"]
+    },
+    {
+      "repo": "raft-kv",
+      "status": "locked",
+      "title": "RAFT-KV",
+      "unlock": "Dec 2026 · after 6.5840 labs 3–4"
+    },
+    {
+      "repo": "agent-eval-harness",
+      "status": "locked",
+      "title": "AGENT-EVAL-HARNESS",
+      "unlock": "planned · project P3"
+    },
+    {
+      "repo": "llm-gateway",
+      "status": "locked",
+      "title": "LLM-GATEWAY",
+      "unlock": "planned · project P4"
+    }
+  ]
+}
