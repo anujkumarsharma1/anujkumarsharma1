@@ -10,6 +10,9 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/anuj-kumar-sharma-0ba045324/"><img src="assets/generated/comms-linkedin.svg" height="46" alt="Linkedin"></a>
   <a href="mailto:anujkumarsharma049@gmail.com"><img src="assets/generated/comms-email.svg" height="46" alt="Gmail"></a>
+  <a href="https://codeforces.com/profile/anujquant"><img src="assets/generated/comms-codeforces.svg" height="46" alt="Codeforces"></a>
+  <a href="https://topmate.io/cybersmith"><img src="assets/generated/comms-topmate.svg" height="46" alt="Topmate"></a>
+  <a href="https://medium.com/@cybersmith"><img src="assets/generated/comms-medium.svg" height="46" alt="Medium"></a>
 </p>
 
 <p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 154 commits all-time, 175 contributions in the last 12 months, streak 1 days (best 4), rank Corporal"></p>
@@ -27,6 +30,8 @@
 
 <p align="center"><img src="assets/generated/locked.svg" width="100%" alt="Locked levels, planned next: RAFT-KV, AGENT-EVAL-HARNESS, LLM-GATEWAY"></p>
 
+<p align="center"><a href="https://codeforces.com/profile/anujquant"><img src="assets/generated/codeforces.svg" width="100%" alt="Codeforces rating None, max None, 0 problems solved"></a></p>
+
 <details>
 <summary><b>Text version</b> · every number above, as a table</summary>
 
@@ -42,7 +47,8 @@
 | Stars from other people | 7 |
 | Rank | Corporal (196 XP = all-time contributions) |
 | Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 38.1%, JavaScript 27.2%, Dart 22.6%, Python 6.7%, PLpgSQL 2.6% |
-| Last sync | 2026-09-28 11:19 IST |
+| Codeforces | None (unrated), max None, 0 solved |
+| Last sync | 2026-09-28 12:08 IST |
 
 </details>
 

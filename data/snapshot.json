@@ -3377,5 +3377,19 @@
    }
   ]
  },
- "synced_at": "2026-09-28T05:49:15Z"
+ "synced_at": "2026-09-28T06:38:29Z",
+ "codeforces": {
+  "handle": "anujquant",
+  "rating": null,
+  "max_rating": null,
+  "rank": "unrated",
+  "max_rank": "unrated",
+  "contests": 0,
+  "solved": 0,
+  "history": []
+ },
+ "medium": {
+  "handle": "cybersmith",
+  "posts": []
+ }
 }
