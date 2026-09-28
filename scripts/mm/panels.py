@@ -551,7 +551,7 @@ def battlefield(snap, cfg, now):
     t_stamp = min(t_last + 0.9, 17.5)
     cx, cy = W / 2, gy + 3.5 * pitch
     title = "SECTOR CLEARED" if len(shots) > 1 else "QUIET SECTOR"
-    sub = f"{fmt_int(total)} CONTRIBUTIONS · BEST STREAK {longest} DAYS"
+    sub = f"{fmt_int(total)} CONTRIBUTIONS · BEST STREAK {longest} DAY{'S' if longest != 1 else ''}"
     bw_ = max(font("fire").width(title, 26, 0.02), font("uib").width(sub, 11.5, 0.1)) + 60
     svg.add(f'<g class="stamp"><path d="{_tile_shape(cx - bw_ / 2, cy - 38, bw_, 74, 12)}" fill="#0b0a14" '
             'fill-opacity=".86" stroke="#f1eefa" stroke-opacity=".6" stroke-width="2.5"/>'
