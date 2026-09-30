@@ -15,7 +15,7 @@
   <a href="https://medium.com/@cybersmith"><img src="assets/generated/comms-medium.svg" height="46" alt="Medium"></a>
 </p>
 
-<p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 161 commits all-time, 184 contributions in the last 12 months, streak 1 days (best 4), rank Corporal"></p>
+<p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 161 commits all-time, 184 contributions in the last 12 months, streak 0 days (best 4), rank Corporal"></p>
 
 <p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 36%, JavaScript 26%, Dart 21%, Python 11%, PLpgSQL 2%"></p>
 
@@ -38,14 +38,14 @@
 | Commits (public, all-time) | 161 |
 | Contributions (last 12 months) | 184 |
 | Active days (last 12 months) | 49 |
-| Current streak | 1 day |
+| Current streak | 0 days |
 | Best streak (all-time) | 4 days |
 | Pull requests opened | 11 |
 | Public repos (forks excluded) | 25 |
 | Stars on own repos | 7 |
 | Rank | Corporal (205 XP = all-time contributions) |
 | Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 36.2%, JavaScript 26.3%, Dart 21.4%, Python 10.9%, PLpgSQL 2.4% |
-| Last sync | 2026-09-29 15:16 IST |
+| Last sync | 2026-09-30 15:08 IST |
 
 </details>
 

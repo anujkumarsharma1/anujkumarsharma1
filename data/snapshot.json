@@ -12,6 +12,19 @@
   "repo_count": 25,
   "repos": [
    {
+    "name": "anujkumarsharma1",
+    "description": "readme",
+    "url": "https://github.com/anujkumarsharma1/anujkumarsharma1",
+    "stars": 0,
+    "forks": 0,
+    "pushed_at": "2026-09-29T09:46:28Z",
+    "archived": false,
+    "language": "Python",
+    "languages": {
+     "Python": 127255
+    }
+   },
+   {
     "name": "anujkumarsharma1.github.io",
     "description": "this is my personal portfolio ",
     "url": "https://github.com/anujkumarsharma1/anujkumarsharma1.github.io",
@@ -25,19 +38,6 @@
      "HTML": 21253,
      "JavaScript": 13781,
      "Python": 10392
-    }
-   },
-   {
-    "name": "anujkumarsharma1",
-    "description": "readme",
-    "url": "https://github.com/anujkumarsharma1/anujkumarsharma1",
-    "stars": 0,
-    "forks": 0,
-    "pushed_at": "2026-09-28T06:40:16Z",
-    "archived": false,
-    "language": "Python",
-    "languages": {
-     "Python": 127255
     }
    },
    {
@@ -2318,6 +2318,11 @@
      "date": "2026-09-29",
      "count": 0,
      "level": 0
+    },
+    {
+     "date": "2026-09-30",
+     "count": 0,
+     "level": 0
     }
    ]
   ],
@@ -3324,7 +3329,8 @@
    "2026-09-26": 0,
    "2026-09-27": 0,
    "2026-09-28": 22,
-   "2026-09-29": 0
+   "2026-09-29": 0,
+   "2026-09-30": 0
   },
   "events": [
    {
@@ -3401,7 +3407,7 @@
    }
   ]
  },
- "synced_at": "2026-09-29T09:46:20Z",
+ "synced_at": "2026-09-30T09:38:53Z",
  "codeforces": {
   "handle": "anujquant",
   "rating": null,
