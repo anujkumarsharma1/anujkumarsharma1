@@ -15,11 +15,11 @@
   <a href="https://medium.com/@cybersmith"><img src="assets/generated/comms-medium.svg" height="46" alt="Medium"></a>
 </p>
 
-<p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 174 commits all-time, 181 contributions in the last 12 months, streak 1 days (best 4), rank Corporal"></p>
+<p align="center"><img src="assets/generated/player-card.svg" width="100%" alt="Player card: 205 commits all-time, 212 contributions in the last 12 months, streak 2 days (best 4), rank Corporal"></p>
 
-<p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 34%, JavaScript 28%, Dart 20%, Python 11%, PLpgSQL 2%"></p>
+<p align="center"><img src="assets/generated/loadout.svg" width="100%" alt="Armory, top languages: TypeScript 33%, JavaScript 29%, Dart 20%, Python 11%, PLpgSQL 2%"></p>
 
-<p align="center"><img src="assets/generated/battlefield.svg" width="100%" alt="Contribution graph as a battlefield: 181 contributions in the last 12 months"></p>
+<p align="center"><img src="assets/generated/battlefield.svg" width="100%" alt="Contribution graph as a battlefield: 212 contributions in the last 12 months"></p>
 
 <p align="center"><a href="https://github.com/anujkumarsharma1/kavach"><img src="assets/generated/mission-kavach.svg" width="100%" alt="KAVACH: Finds payloads hidden in the least-significant bits of model weights, the blind spot that pickle scanners like ModelScan never check. Plants, detects, and destroys them live."></a></p>
 
@@ -35,17 +35,17 @@
 
 | Stat | Value |
 |---|---|
-| Commits (public, all-time) | 174 |
-| Contributions (last 12 months) | 181 |
-| Active days (last 12 months) | 46 |
-| Current streak | 1 day |
+| Commits (public, all-time) | 205 |
+| Contributions (last 12 months) | 212 |
+| Active days (last 12 months) | 47 |
+| Current streak | 2 days |
 | Best streak (all-time) | 4 days |
 | Pull requests opened | 11 |
 | Public repos (forks excluded) | 26 |
 | Stars on own repos | 7 |
-| Rank | Corporal (219 XP = all-time contributions) |
-| Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 33.9%, JavaScript 27.9%, Dart 20.1%, Python 10.7%, PLpgSQL 2.3% |
-| Last sync | 2026-10-09 15:59 IST |
+| Rank | Corporal (250 XP = all-time contributions) |
+| Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 33.1%, JavaScript 28.8%, Dart 19.6%, Python 11.2%, PLpgSQL 2.2% |
+| Last sync | 2026-10-10 15:16 IST |
 
 </details>
 
