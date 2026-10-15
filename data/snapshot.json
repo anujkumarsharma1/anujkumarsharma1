@@ -12,12 +12,44 @@
   "repo_count": 26,
   "repos": [
    {
+    "name": "frontend-classroomiq",
+    "description": "",
+    "url": "https://github.com/anujkumarsharma1/frontend-classroomiq",
+    "stars": 0,
+    "forks": 0,
+    "pushed_at": "2026-10-14T21:43:15Z",
+    "archived": false,
+    "language": "JavaScript",
+    "languages": {
+     "JavaScript": 83780,
+     "CSS": 47765,
+     "HTML": 621,
+     "Dockerfile": 306
+    }
+   },
+   {
+    "name": "kavach",
+    "description": "This is the model scan and purifier made for the precision care Hackathon",
+    "url": "https://github.com/anujkumarsharma1/kavach",
+    "stars": 1,
+    "forks": 0,
+    "pushed_at": "2026-10-14T16:46:57Z",
+    "archived": false,
+    "language": "Python",
+    "languages": {
+     "Python": 80704,
+     "TypeScript": 48410,
+     "CSS": 5963,
+     "HTML": 5181
+    }
+   },
+   {
     "name": "anujkumarsharma1",
     "description": "readme",
     "url": "https://github.com/anujkumarsharma1/anujkumarsharma1",
     "stars": 0,
     "forks": 0,
-    "pushed_at": "2026-10-13T10:30:54Z",
+    "pushed_at": "2026-10-14T08:39:32Z",
     "archived": false,
     "language": "Python",
     "languages": {
@@ -60,19 +92,6 @@
      "HTML": 21253,
      "JavaScript": 13781,
      "Python": 10392
-    }
-   },
-   {
-    "name": "kavach",
-    "description": "This is the model scan and purifier made for the precision care Hackathon",
-    "url": "https://github.com/anujkumarsharma1/kavach",
-    "stars": 1,
-    "forks": 0,
-    "pushed_at": "2026-09-28T04:47:12Z",
-    "archived": false,
-    "language": "Python",
-    "languages": {
-     "Python": 68000
     }
    },
    {
@@ -251,22 +270,6 @@
     }
    },
    {
-    "name": "frontend-classroomiq",
-    "description": "",
-    "url": "https://github.com/anujkumarsharma1/frontend-classroomiq",
-    "stars": 0,
-    "forks": 0,
-    "pushed_at": "2026-03-19T06:58:10Z",
-    "archived": false,
-    "language": "HTML",
-    "languages": {
-     "HTML": 266290,
-     "JavaScript": 189902,
-     "CSS": 4488,
-     "Dockerfile": 306
-    }
-   },
-   {
     "name": "grevo",
     "description": "this is the project for the pccoe hackathon ",
     "url": "https://github.com/anujkumarsharma1/grevo",
@@ -397,9 +400,9 @@
     }
    }
   ],
-  "commits_all_time": 223,
-  "contributions_all_time": 271,
-  "contributions_last_year": 224,
+  "commits_all_time": 229,
+  "contributions_all_time": 277,
+  "contributions_last_year": 230,
   "calendar": [
    [
     {
@@ -2343,6 +2346,11 @@
     },
     {
      "date": "2026-10-14",
+     "count": 6,
+     "level": 2
+    },
+    {
+     "date": "2026-10-15",
      "count": 0,
      "level": 0
     }
@@ -3366,9 +3374,16 @@
    "2026-10-11": 0,
    "2026-10-12": 4,
    "2026-10-13": 0,
-   "2026-10-14": 0
+   "2026-10-14": 6,
+   "2026-10-15": 0
   },
   "events": [
+   {
+    "kind": "push",
+    "repo": "kavach",
+    "n": null,
+    "when": "2026-10-14T16:46:58Z"
+   },
    {
     "kind": "push",
     "repo": "prof-vaishali-ingale",
@@ -3434,16 +3449,10 @@
     "repo": "prof-vaishali-ingale",
     "n": null,
     "when": "2026-10-09T16:01:14Z"
-   },
-   {
-    "kind": "push",
-    "repo": "prof-vaishali-ingale",
-    "n": null,
-    "when": "2026-10-10T14:14:18Z"
    }
   ]
  },
- "synced_at": "2026-10-14T08:39:25Z",
+ "synced_at": "2026-10-15T08:14:30Z",
  "codeforces": {
   "handle": "anujquant",
   "rating": null,
