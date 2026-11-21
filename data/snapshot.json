@@ -12,6 +12,19 @@
   "repo_count": 28,
   "repos": [
    {
+    "name": "anujkumarsharma1",
+    "description": "readme",
+    "url": "https://github.com/anujkumarsharma1/anujkumarsharma1",
+    "stars": 0,
+    "forks": 0,
+    "pushed_at": "2026-11-20T11:29:54Z",
+    "archived": false,
+    "language": "Python",
+    "languages": {
+     "Python": 127255
+    }
+   },
+   {
     "name": "chinmay-desale-portfolio",
     "description": "Chinmay Desale - video editor & motion graphics portfolio. Static HTML/CSS/JS rebuild in the Sahil Patil Canva design.",
     "url": "https://github.com/anujkumarsharma1/chinmay-desale-portfolio",
@@ -26,19 +39,6 @@
      "HTML": 12613,
      "Shell": 1267,
      "PowerShell": 877
-    }
-   },
-   {
-    "name": "anujkumarsharma1",
-    "description": "readme",
-    "url": "https://github.com/anujkumarsharma1/anujkumarsharma1",
-    "stars": 0,
-    "forks": 0,
-    "pushed_at": "2026-11-19T11:33:17Z",
-    "archived": false,
-    "language": "Python",
-    "languages": {
-     "Python": 127255
     }
    },
    {
@@ -2389,6 +2389,11 @@
      "date": "2026-11-20",
      "count": 0,
      "level": 0
+    },
+    {
+     "date": "2026-11-21",
+     "count": 0,
+     "level": 0
     }
    ]
   ],
@@ -3447,11 +3452,12 @@
    "2026-11-17": 0,
    "2026-11-18": 0,
    "2026-11-19": 1,
-   "2026-11-20": 0
+   "2026-11-20": 0,
+   "2026-11-21": 0
   },
   "events": []
  },
- "synced_at": "2026-11-20T11:29:49Z",
+ "synced_at": "2026-11-21T10:56:11Z",
  "codeforces": {
   "handle": "anujquant",
   "rating": null,
