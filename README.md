@@ -37,7 +37,7 @@
 |---|---|
 | Commits (public, all-time) | 267 |
 | Contributions (last 12 months) | 255 |
-| Active days (last 12 months) | 48 |
+| Active days (last 12 months) | 45 |
 | Current streak | 0 days |
 | Best streak (all-time) | 4 days |
 | Pull requests opened | 14 |
@@ -45,7 +45,7 @@
 | Stars on own repos | 7 |
 | Rank | Sergeant (317 XP = all-time contributions) |
 | Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 31.8%, JavaScript 29.8%, Dart 18.0%, Python 12.7%, Liquid 2.2% |
-| Last sync | 2026-11-21 16:26 IST |
+| Last sync | 2026-11-22 16:45 IST |
 
 </details>
 
