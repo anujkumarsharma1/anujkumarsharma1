@@ -45,7 +45,7 @@
 | Stars on own repos | 7 |
 | Rank | Sergeant (321 XP = all-time contributions) |
 | Top languages (share of bytes, excluding HTML/CSS/SCSS) | TypeScript 31.8%, JavaScript 29.8%, Dart 18.0%, Python 12.7%, Liquid 2.2% |
-| Last sync | 2026-11-26 17:53 IST |
+| Last sync | 2026-11-27 17:40 IST |
 
 </details>
 
